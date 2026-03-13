@@ -1,0 +1,152 @@
+// 100+ Email Subject Line Examples Database
+
+export interface SubjectLineExample {
+  id: number;
+  text: string;
+  category: ExampleCategory;
+  tags: string[];
+}
+
+export type ExampleCategory = 'marketing' | 'newsletter' | 'cold-email' | 'sales' | 'follow-up' | 'e-commerce' | 'saas';
+
+export const CATEGORY_OPTIONS: { value: ExampleCategory | 'all'; label: string }[] = [
+  { value: 'all', label: 'All Categories' },
+  { value: 'marketing', label: 'Marketing' },
+  { value: 'newsletter', label: 'Newsletter' },
+  { value: 'cold-email', label: 'Cold Email' },
+  { value: 'sales', label: 'Sales' },
+  { value: 'follow-up', label: 'Follow-up' },
+  { value: 'e-commerce', label: 'E-commerce' },
+  { value: 'saas', label: 'SaaS' },
+];
+
+export const examples: SubjectLineExample[] = [
+  // Marketing (15)
+  { id: 1, text: 'Your exclusive 30% discount expires tonight', category: 'marketing', tags: ['urgency', 'discount'] },
+  { id: 2, text: 'We just launched something you will love', category: 'marketing', tags: ['curiosity', 'launch'] },
+  { id: 3, text: '5 proven strategies to boost your ROI by 200%', category: 'marketing', tags: ['numbers', 'benefit'] },
+  { id: 4, text: 'The marketing trend that changed our business', category: 'marketing', tags: ['curiosity', 'social proof'] },
+  { id: 5, text: 'Free guide: Master email marketing in 7 days', category: 'marketing', tags: ['free', 'benefit'] },
+  { id: 6, text: '{FirstName}, your personalized report is ready', category: 'marketing', tags: ['personalization'] },
+  { id: 7, text: 'Last chance to save 50% on annual plans', category: 'marketing', tags: ['urgency', 'discount'] },
+  { id: 8, text: 'What 10,000 marketers know that you don\'t', category: 'marketing', tags: ['curiosity', 'fomo'] },
+  { id: 9, text: 'Introducing our biggest update of the year', category: 'marketing', tags: ['launch', 'curiosity'] },
+  { id: 10, text: 'Why 87% of companies are switching to this', category: 'marketing', tags: ['numbers', 'social proof'] },
+  { id: 11, text: 'Your competitors are reading this', category: 'marketing', tags: ['fomo', 'curiosity'] },
+  { id: 12, text: 'We made a mistake... and here is how we fixed it', category: 'marketing', tags: ['curiosity', 'storytelling'] },
+  { id: 13, text: 'The simple trick that doubled our conversions', category: 'marketing', tags: ['curiosity', 'benefit'] },
+  { id: 14, text: 'You are invited: exclusive product preview', category: 'marketing', tags: ['exclusivity', 'personalization'] },
+  { id: 15, text: 'Stop wasting money on ads that don\'t work', category: 'marketing', tags: ['pain point', 'benefit'] },
+
+  // Newsletter (15)
+  { id: 16, text: 'This Week: AI News You Actually Need to Know', category: 'newsletter', tags: ['weekly', 'curated'] },
+  { id: 17, text: 'Your Monday Briefing: 3 Stories That Matter', category: 'newsletter', tags: ['weekly', 'numbers'] },
+  { id: 18, text: 'The 5-Minute Digest: Top Industry Insights', category: 'newsletter', tags: ['time-saving', 'curated'] },
+  { id: 19, text: 'What happened this week in tech (and why it matters)', category: 'newsletter', tags: ['weekly', 'curiosity'] },
+  { id: 20, text: 'Friday Roundup: Best reads of the week', category: 'newsletter', tags: ['weekly', 'curated'] },
+  { id: 21, text: 'The one article everyone shared this week', category: 'newsletter', tags: ['social proof', 'curiosity'] },
+  { id: 22, text: 'Issue #47: The future of remote work', category: 'newsletter', tags: ['series', 'topic'] },
+  { id: 23, text: 'Quick Update: 3 things you missed', category: 'newsletter', tags: ['time-saving', 'numbers'] },
+  { id: 24, text: 'Your February recap + what is coming next', category: 'newsletter', tags: ['recap', 'preview'] },
+  { id: 25, text: 'Insider Picks: Tools our team can\'t live without', category: 'newsletter', tags: ['curated', 'recommendation'] },
+  { id: 26, text: 'Deep dive: How AI is reshaping content creation', category: 'newsletter', tags: ['deep dive', 'topic'] },
+  { id: 27, text: 'The Growth Report: March 2026 Edition', category: 'newsletter', tags: ['monthly', 'series'] },
+  { id: 28, text: '10 links worth your time this week', category: 'newsletter', tags: ['numbers', 'curated'] },
+  { id: 29, text: 'Behind the scenes: Our product development process', category: 'newsletter', tags: ['transparency', 'storytelling'] },
+  { id: 30, text: 'Community spotlight + upcoming events', category: 'newsletter', tags: ['community', 'events'] },
+
+  // Cold Email (15)
+  { id: 31, text: 'Quick question about your growth strategy', category: 'cold-email', tags: ['question', 'short'] },
+  { id: 32, text: 'Idea for {Company} - worth 2 minutes?', category: 'cold-email', tags: ['personalization', 'time-saving'] },
+  { id: 33, text: 'Loved your talk at the conference', category: 'cold-email', tags: ['personalization', 'flattery'] },
+  { id: 34, text: 'Mutual connection suggested I reach out', category: 'cold-email', tags: ['referral', 'trust'] },
+  { id: 35, text: 'How we helped {Similar Company} grow 3x', category: 'cold-email', tags: ['social proof', 'benefit'] },
+  { id: 36, text: 'I noticed something about your website', category: 'cold-email', tags: ['curiosity', 'personalization'] },
+  { id: 37, text: 'Quick way to solve your {pain point} challenge', category: 'cold-email', tags: ['benefit', 'relevance'] },
+  { id: 38, text: 'Not another sales pitch (I promise)', category: 'cold-email', tags: ['humor', 'pattern interrupt'] },
+  { id: 39, text: 'Fellow founder here - can I pick your brain?', category: 'cold-email', tags: ['peer', 'authenticity'] },
+  { id: 40, text: '15 seconds to see if this is relevant for you', category: 'cold-email', tags: ['time-saving', 'respectful'] },
+  { id: 41, text: 'Saw your post on LinkedIn about AI', category: 'cold-email', tags: ['personalization', 'relevance'] },
+  { id: 42, text: 'Congrats on the recent funding round!', category: 'cold-email', tags: ['personalization', 'timely'] },
+  { id: 43, text: 'A thought about your onboarding flow', category: 'cold-email', tags: ['value-add', 'specific'] },
+  { id: 44, text: 'We share 3 investors in common', category: 'cold-email', tags: ['social proof', 'connection'] },
+  { id: 45, text: 'Would it help if I showed you a better way?', category: 'cold-email', tags: ['question', 'benefit'] },
+
+  // Sales (15)
+  { id: 46, text: 'Your trial expires in 48 hours - lock in your rate', category: 'sales', tags: ['urgency', 'trial'] },
+  { id: 47, text: 'See why 5,000+ teams chose our solution', category: 'sales', tags: ['social proof', 'numbers'] },
+  { id: 48, text: 'Custom demo: see how we solve your exact challenge', category: 'sales', tags: ['personalization', 'benefit'] },
+  { id: 49, text: 'ROI calculator: your potential savings with us', category: 'sales', tags: ['benefit', 'tool'] },
+  { id: 50, text: 'Case study: How {Company} saved $2M annually', category: 'sales', tags: ['social proof', 'numbers'] },
+  { id: 51, text: 'Your pricing plan recommendation is ready', category: 'sales', tags: ['personalization', 'ready'] },
+  { id: 52, text: 'Exclusive offer for early adopters', category: 'sales', tags: ['exclusivity', 'urgency'] },
+  { id: 53, text: 'Compare us vs. {Competitor} - honest breakdown', category: 'sales', tags: ['transparency', 'comparison'] },
+  { id: 54, text: 'Join 200+ companies that switched this quarter', category: 'sales', tags: ['social proof', 'fomo'] },
+  { id: 55, text: '{FirstName}, I put together this for your team', category: 'sales', tags: ['personalization', 'effort'] },
+  { id: 56, text: 'Ready to see 3x better results?', category: 'sales', tags: ['question', 'benefit'] },
+  { id: 57, text: 'What our happiest customers have in common', category: 'sales', tags: ['curiosity', 'social proof'] },
+  { id: 58, text: 'Your free upgrade is waiting', category: 'sales', tags: ['free', 'urgency'] },
+  { id: 59, text: 'The real cost of not switching (hint: it is expensive)', category: 'sales', tags: ['pain point', 'urgency'] },
+  { id: 60, text: 'Let me show you something in 5 minutes', category: 'sales', tags: ['time-saving', 'demo'] },
+
+  // Follow-up (15)
+  { id: 61, text: 'Following up on our conversation about {topic}', category: 'follow-up', tags: ['professional', 'direct'] },
+  { id: 62, text: 'Any thoughts on the proposal I sent?', category: 'follow-up', tags: ['question', 'direct'] },
+  { id: 63, text: 'I added something to our last discussion', category: 'follow-up', tags: ['value-add', 'curiosity'] },
+  { id: 64, text: 'Quick check-in - did you get a chance to review?', category: 'follow-up', tags: ['gentle', 'question'] },
+  { id: 65, text: 'Re: Next steps for our partnership', category: 'follow-up', tags: ['professional', 'forward'] },
+  { id: 66, text: 'Updated proposal based on your feedback', category: 'follow-up', tags: ['responsive', 'value-add'] },
+  { id: 67, text: 'The ball is in your court!', category: 'follow-up', tags: ['casual', 'action'] },
+  { id: 68, text: 'Bumping this up - don\'t want you to miss out', category: 'follow-up', tags: ['fomo', 'gentle'] },
+  { id: 69, text: 'Is this still a priority for your team?', category: 'follow-up', tags: ['question', 'qualifying'] },
+  { id: 70, text: 'I found something relevant for your project', category: 'follow-up', tags: ['value-add', 'relevant'] },
+  { id: 71, text: 'Closing the loop on our {topic} conversation', category: 'follow-up', tags: ['professional', 'closing'] },
+  { id: 72, text: 'New data that supports our discussion', category: 'follow-up', tags: ['value-add', 'data'] },
+  { id: 73, text: 'Should I send this to someone else on your team?', category: 'follow-up', tags: ['qualifying', 'helpful'] },
+  { id: 74, text: 'Here is the resource I mentioned yesterday', category: 'follow-up', tags: ['helpful', 'promise'] },
+  { id: 75, text: 'One more thing about {topic}...', category: 'follow-up', tags: ['curiosity', 'addition'] },
+
+  // E-commerce (20)
+  { id: 76, text: 'Your cart is waiting (items selling fast)', category: 'e-commerce', tags: ['cart abandonment', 'urgency'] },
+  { id: 77, text: 'Flash sale: 40% off everything for 6 hours', category: 'e-commerce', tags: ['sale', 'urgency'] },
+  { id: 78, text: 'New arrivals you won\'t find anywhere else', category: 'e-commerce', tags: ['new', 'exclusivity'] },
+  { id: 79, text: 'Your wishlist items are on sale now', category: 'e-commerce', tags: ['personalization', 'sale'] },
+  { id: 80, text: 'Free shipping this weekend only', category: 'e-commerce', tags: ['free shipping', 'urgency'] },
+  { id: 81, text: 'We saved your picks - 3 items left in stock', category: 'e-commerce', tags: ['cart abandonment', 'scarcity'] },
+  { id: 82, text: 'Back in stock: The item you\'ve been waiting for', category: 'e-commerce', tags: ['restock', 'personalization'] },
+  { id: 83, text: 'Your order has shipped! Track it here', category: 'e-commerce', tags: ['transactional', 'update'] },
+  { id: 84, text: 'Customers also bought: recommendations for you', category: 'e-commerce', tags: ['recommendation', 'personalization'] },
+  { id: 85, text: 'Earn double rewards points this week', category: 'e-commerce', tags: ['loyalty', 'benefit'] },
+  { id: 86, text: 'Spring collection just dropped', category: 'e-commerce', tags: ['new', 'seasonal'] },
+  { id: 87, text: 'Your VIP early access starts now', category: 'e-commerce', tags: ['exclusivity', 'loyalty'] },
+  { id: 88, text: 'Last day for Buy 1 Get 1 Free', category: 'e-commerce', tags: ['sale', 'urgency'] },
+  { id: 89, text: 'How do you like your recent purchase?', category: 'e-commerce', tags: ['review request', 'engagement'] },
+  { id: 90, text: 'Price drop alert on items you viewed', category: 'e-commerce', tags: ['personalization', 'price'] },
+  { id: 91, text: 'Your $10 reward expires tomorrow', category: 'e-commerce', tags: ['urgency', 'loyalty'] },
+  { id: 92, text: 'We picked these just for you, {FirstName}', category: 'e-commerce', tags: ['personalization', 'curated'] },
+  { id: 93, text: 'Clearance: up to 70% off top brands', category: 'e-commerce', tags: ['sale', 'clearance'] },
+  { id: 94, text: 'Bestsellers are back (limited quantities)', category: 'e-commerce', tags: ['popular', 'scarcity'] },
+  { id: 95, text: 'Complete your look with these accessories', category: 'e-commerce', tags: ['cross-sell', 'recommendation'] },
+
+  // SaaS (20)
+  { id: 96, text: 'Your free trial is almost over - upgrade today', category: 'saas', tags: ['trial', 'urgency'] },
+  { id: 97, text: 'New feature: AI-powered analytics is here', category: 'saas', tags: ['feature', 'launch'] },
+  { id: 98, text: 'Your weekly usage report: 47% improvement', category: 'saas', tags: ['personalization', 'data'] },
+  { id: 99, text: 'Tips to get more from your account', category: 'saas', tags: ['onboarding', 'value'] },
+  { id: 100, text: '3 features you haven\'t tried yet', category: 'saas', tags: ['engagement', 'numbers'] },
+  { id: 101, text: 'Webinar: Advanced strategies for power users', category: 'saas', tags: ['education', 'engagement'] },
+  { id: 102, text: 'Your integration with {App} is now available', category: 'saas', tags: ['feature', 'integration'] },
+  { id: 103, text: 'Security update: Important changes to your account', category: 'saas', tags: ['security', 'important'] },
+  { id: 104, text: 'You unlocked a new achievement!', category: 'saas', tags: ['gamification', 'engagement'] },
+  { id: 105, text: 'How {Company} uses our platform to save 20 hours/week', category: 'saas', tags: ['case study', 'benefit'] },
+  { id: 106, text: 'API update: What developers need to know', category: 'saas', tags: ['technical', 'update'] },
+  { id: 107, text: 'Your team activity digest for this week', category: 'saas', tags: ['personalization', 'recap'] },
+  { id: 108, text: 'We fixed the bug you reported - thank you!', category: 'saas', tags: ['support', 'responsive'] },
+  { id: 109, text: 'Upgrade to Pro: 50% off for existing users', category: 'saas', tags: ['upgrade', 'discount'] },
+  { id: 110, text: 'Your feedback shaped our latest release', category: 'saas', tags: ['community', 'gratitude'] },
+  { id: 111, text: 'Scheduled maintenance: what you need to know', category: 'saas', tags: ['maintenance', 'notice'] },
+  { id: 112, text: 'You have 3 unread notifications', category: 'saas', tags: ['engagement', 'notification'] },
+  { id: 113, text: 'Benchmark report: how you compare to peers', category: 'saas', tags: ['data', 'comparison'] },
+  { id: 114, text: 'Your workspace hits a new milestone', category: 'saas', tags: ['milestone', 'engagement'] },
+  { id: 115, text: 'Template gallery: 50+ new templates added', category: 'saas', tags: ['content', 'resource'] },
+];
